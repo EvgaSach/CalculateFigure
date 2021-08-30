@@ -22,7 +22,7 @@ namespace CalculateFigure
             Console.WriteLine("\n 1-равнобежренная трапеция \n 2- правильный паралелограм  \n 3-ромб  \n 4-правильный многоугольник");
                 
             FigureType = Int32.Parse(Console.ReadLine());
-            Console.WriteLine($"Вы выбрали тип фигуры: {FigureType}");
+            Console.WriteLine($"Вы выбрали тип фигуры : {FigureType}");
             return FigureType;
 
         }
@@ -71,26 +71,26 @@ namespace CalculateFigure
 
         public double CalculateRombSquere()
         {
-            Console.WriteLine("Пожалуйста введите сторону ромба:(см.кв)");
+            Console.WriteLine("Пожалуйста введите сторону ромба : (см.кв)");
             aa = Double.Parse(Console.ReadLine());
-            Console.WriteLine("Пожалуйста введите высоту ромба:(см.кв)");
+            Console.WriteLine("Пожалуйста введите высоту ромба : (см.кв)");
             hh = Double.Parse(Console.ReadLine());
             
             Squere =aa*hh ;
-            Console.WriteLine($"Площадь данной фигуры :{Squere}см.кв");
+            Console.WriteLine($"Площадь данной фигуры : {Squere}см.кв");
             return Squere;
         }
 
         public double CalculatePolygonSquere()
         {
             Console.WriteLine("Вычесление площади правильного n-угольника \n");
-            Console.WriteLine("Пожалуйста введите радиус описанной окружности:(см.кв)");
+            Console.WriteLine("Пожалуйста введите радиус описанной окружности :(см.кв)");
             RR= Double.Parse(Console.ReadLine());
-            Console.WriteLine("Пожалуйста введите угол а n-угольника :(см.кв)");
+            Console.WriteLine("Пожалуйста введите угол а n-угольника :(градусов)");
             alfa = Double.Parse(Console.ReadLine());
             //---------------------Формула для вычесление формулы описанного n-угольника
-            Squere = (Math.PI) / 2 * Math.Pow(RR, 2) * Math.Sin(alfa);
-            Console.WriteLine($"Площадь данной фигуры :{Squere}см.кв");
+            Squere =Math.Abs( (Math.PI) / 2 * Math.Pow(RR, 2) * Math.Sin(alfa));
+            Console.WriteLine($"Площадь данной фигуры : {Squere}(см.кв)");
             return Squere;
         }
     }
