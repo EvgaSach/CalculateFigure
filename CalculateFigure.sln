@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculateFigure", "CalculateFigure.csproj", "{ECF41577-D638-41DB-ACD2-2AEC47706E0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECF41577-D638-41DB-ACD2-2AEC47706E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF41577-D638-41DB-ACD2-2AEC47706E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF41577-D638-41DB-ACD2-2AEC47706E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF41577-D638-41DB-ACD2-2AEC47706E0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FF81FC5-E019-496C-9859-4EC5CFE57D7C}
+	EndGlobalSection
+EndGlobal
