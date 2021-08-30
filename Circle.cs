@@ -11,7 +11,7 @@ namespace CalculateFigure
             public Circle(double r)
             {
                 Radius = r;
-            Console.WriteLine("Hello.Whis is new lib");
+            
             }
             public override double CalculateArea()
             {
