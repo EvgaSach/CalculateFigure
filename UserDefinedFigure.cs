@@ -16,6 +16,7 @@ namespace CalculateFigure
         public double alfa { get; set; }//угол правильного многоугольника
        
         public int FigureType { get; set; }
+        public int pat;//для использования метода Int32.TryParse
         public UserDefinedFigure() { }//конструктор по умолчанию
 
         public int DefinefigureType()//метод для задания пользователем типа фигуры
@@ -23,8 +24,17 @@ namespace CalculateFigure
             Console.Write("Введите пожалуйста индекс типа фигуры расчет которой вы хотите произвести n/информация об индексах типов:");
             Console.WriteLine("\n 1-равнобежренная трапеция \n 2- правильный паралелограм  \n 3-ромб  \n 4-правильный многоугольник");
                 
-            FigureType = Int32.Parse(Console.ReadLine());
-            Console.WriteLine($"Вы выбрали тип фигуры : {FigureType}");
+            string input = Console.ReadLine();//для проверки коректности вводимого пользователем числа
+            bool result = Int32.TryParse(input, out pat);
+                if (result==true)
+            {
+                FigureType = Int32.Parse(input);
+                Console.WriteLine($"Вы выбрали тип фигуры : {FigureType}");
+            }
+            else
+            {
+                Console.WriteLine("Вы ввели не коректный тип фигуры.");
+            }
             return FigureType;
 
         }
