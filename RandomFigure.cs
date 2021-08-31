@@ -31,7 +31,20 @@ namespace CalculateFigure
             Console.WriteLine($"Площадь данного прямоугольника : {Squere} (см.кв)");
             return Squere;
         }
-        //в планах поработать с преобразованиями типов и вызовом здесь формул расчета 
-        //триугольника и правильного  n-угольника
+        /// <summary>
+        /// хотелось бы получить обратную связь о правильности-коректности метода
+        /// вычесления площади триугольника в данном классе
+        /// </summary>
+        
+       
+        public double CalculateArea(double AA,double BB,double CC)
+        {
+            Triangle rf3 = new Triangle(AA, BB, CC);
+            Squere=rf3.CalculateArea();
+            rf3.CheckTriangle();
+            return Squere;
+
+        }
+        
     }
 }
