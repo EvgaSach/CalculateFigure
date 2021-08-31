@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Globalization;
+using System.Threading;
 
 namespace CalculateFigure
 {
@@ -29,8 +31,8 @@ namespace CalculateFigure
 
         public override double CalculateArea()
         {
-            Console.WriteLine("Внимание,данный метод находиться в доработки,используйте запятую в качестве раздилителя \n-пример введения" +
-                "\n четыре с половинной вводить как -4,5");
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en-US");
+            
             FigureType = DefinefigureType();
             if (FigureType == 1)
             {
@@ -65,19 +67,20 @@ namespace CalculateFigure
             Console.WriteLine("Enter HH:");
             hh = Double.Parse(Console.ReadLine());
             Squere = (aa + bb) / 2 * hh;
-            Console.WriteLine($"Площадь данной фигуры :{Squere}см.кв ");
+            Console.WriteLine($"Площадь данной фигуры :{Squere} (см.кв) ");
             return Squere;
         }
 
         public double CalculateRombSquere()
         {
+          
             Console.WriteLine("Пожалуйста введите сторону ромба : (см.кв)");
             aa = Double.Parse(Console.ReadLine());
             Console.WriteLine("Пожалуйста введите высоту ромба : (см.кв)");
             hh = Double.Parse(Console.ReadLine());
             
             Squere =aa*hh ;
-            Console.WriteLine($"Площадь данной фигуры : {Squere}см.кв");
+            Console.WriteLine($"Площадь данной фигуры : {Squere}(см.кв)");
             return Squere;
         }
 
